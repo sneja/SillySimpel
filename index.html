@@ -1,67 +1,39 @@
 <html>
-  <head>
-    <title>Device Properties Example</title>
-
-    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-    <script type="text/javascript" charset="utf-8">
-
-    // Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
-
-    // device APIs are available
-    //
-    function onDeviceReady() {
-        navigator.geolocation.getCurrentPosition(onSuccess, onError);
-    }
-
-    // onSuccess Geolocation
-    //
-    function onSuccess(position) {
-        var element = document.getElementById('geolocation');
-        element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
-                            'Longitude: '          + position.coords.longitude             + '<br />' +
-                            'Altitude: '           + position.coords.altitude              + '<br />' +
-                            'Accuracy: '           + position.coords.accuracy              + '<br />' +
-                            'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
-                            'Heading: '            + position.coords.heading               + '<br />' +
-                            'Speed: '              + position.coords.speed                 + '<br />' +
-                            'Timestamp: '          + position.timestamp                    + '<br />';
-    }
+ <head>
+ <title>Device Properties Example</title> 
+ <style>
+ 	* {
+		margin:0px;
+		padding:0px;
+	}
+ 
+ 	#nisseFa li{
+		list-style-type:none;
+		width:100%;
+		text-align:center;
+		color:#FFF;
+		background-color:#CCC;
+		margin-top:5px;
+		border-radius:5px;
+		
+	}
 	
-	function alertDismissed() {
-    return;
-							}
-
-	navigator.notification.alert(
-    'You are the winner!',  // message
-    alertDismissed,         // callback
-    'Game Over',            // title
-    'Done'                  // buttonName
-									);
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-    // onError Callback receives a PositionError object
-    //
-    function onError(error) {
-        alert('code: '    + error.code    + '\n' +
-              'message: ' + error.message + '\n');
-    }
-
-    </script>
-  </head>
+	#nisseFa li:hover
+{ 
+background-color:#F00;
+}
+ 
+ 
+ </style>  
+ </head>
   <body>
-    <p id="geolocation">Finding geolocation...</p>
+    <ul id="nisseFa">
+    	<li>Liste</li>
+        <li>Liste</li>
+        <li>Liste</li>
+        <li>Liste</li>
+    
+    
+    </ul>
   </body>
 </html>
